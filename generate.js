@@ -12,11 +12,11 @@ const randomSlug = function(length = 20){
 const pathNumber = pathFolder + '/numbers/';
 const pathSize = pathFolder + '/sizes/';
 
-if(!fs.existsSync(pathFolder)) {
-  fs.mkdirSync(pathFolder);
-}
+// if(!fs.existsSync(pathFolder)) {
+//   fs.mkdirSync(pathFolder);
+// }
 if(!fs.existsSync(pathNumber)) {
-  fs.mkdirSync(pathNumber);
+  fs.mkdirSync(pathNumber, {recursive: true});
 }
 if(!fs.existsSync(pathSize)) {
   fs.mkdirSync(pathSize);
